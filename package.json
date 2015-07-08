@@ -1,0 +1,41 @@
+{
+  "name": "auto-suggest-email",
+  "version": "0.1.0",
+  "keywords": [
+    "Javascript",
+    "E-Mail",
+    "Auto-suggest",
+    "Forms",
+    "HTML5"
+  ],
+  "description": "A little handy Javascript tool, that suggests auto-completion to your users, while they start typing their e-mail address in a form.",
+  "homepage": "https://github.com/Fetten/auto-suggest-email",
+  "author": "Marcel Fetten <fetten@fetten-meier.com>",
+  "contributors": [
+    "Marcel Fetten <fetten@fetten-meier.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Fetten/auto-suggest-email.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Fetten/auto-suggest-email/issues"
+  },
+  "license": "MIT",
+  "main": "dist/auto-suggest-email.min.js",
+  "private": true,
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-banner": "^0.3.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-copy": "~0.8.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-uglify": "~0.7.0",
+    "load-grunt-tasks": "^2.0.0",
+    "time-grunt": "^1.0.0"
+  },
+  "engines": {
+    "node": "~0.10.1"
+  },
+  "dependencies": {}
+}

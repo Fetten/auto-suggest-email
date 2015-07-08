@@ -1,0 +1,31 @@
+{
+  "name": "auto-suggest-email",
+  "version": "0.1.0",
+  "keywords": [
+    "Javascript",
+    "E-Mail",
+    "Auto-suggest",
+    "Forms",
+    "HTML5"
+  ],
+  "description": "A little handy Javascript tool, that suggests auto-completion to your users, while they start typing their e-mail address in a form.",
+  "homepage": "http://www.fetten-meier.com",
+  "authors": [
+    "Marcel Fetten <fetten@fetten-meier.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Fetten/auto-suggest-email.git"
+  },
+  "license": "MIT",
+  "main": [
+    "dist/auto-suggest-email.js",
+    "dist/auto-suggest-email.min.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "src",
+    "Gruntfile.js",
+    "package.json"
+  ]
+}
