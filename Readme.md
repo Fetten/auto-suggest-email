@@ -74,6 +74,19 @@ I recommend to use Auto-Suggest E-Mail on any input form, where a users need to 
 * Login forms
 * Newsletter registration
 
+## Browser Support
+Auto-Suggest E-Mail works in all modern web browsers, that support HTML5, including:
+
+* IE9+
+* Firefox 3.5+
+* Opera 9+
+* Safari 4+
+* Chrome 1+ (I think)
+* iPhone and iPad iOS1+
+* Android phone and tablets 2.1+
+* Blackberry OS6+
+* Windows 7.5+ (new Mango version)
+
 
 ## Copyright and license
 Copyright 2015 [Marcel Fetten](http://www.fetten-meier.com). Code released under [the MIT license](License.md).
