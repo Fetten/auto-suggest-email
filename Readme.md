@@ -29,7 +29,7 @@ To get the script running, create an instance of it and tell Auto-Suggest E-Mail
     var inputField = document.querySelector('form input#email');
     var ase = new autoSuggestEmail(inputField, {
         domains:  ["mail.ru", "gmail.com", "googlemail.com", "hotmail.com", "hotmail.co.uk", "yahoo.com", "yahoo.co.jp"],
-        priority: ["mail.ru", "gmail.com", "hotmail.com", ""yahoo.co.jp"]
+        priority: ["mail.ru", "gmail.com", "hotmail.com", "yahoo.co.jp"]
     });
 </script>
 ```
