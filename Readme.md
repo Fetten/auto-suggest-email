@@ -1,5 +1,5 @@
 # Auto-Suggest E-Mail
-[![Auto-Suggest E-Mail on Bower](https://img.shields.io/bower/v/auto-suggest-email.svg) ](https://www.npmjs.com/package/bootstrap)
+[![Auto-Suggest E-Mail on Bower](https://img.shields.io/bower/v/auto-suggest-email.svg) ](bower.io/search/?q=auto-suggest-email)
 
 A little handy Javascript tool, that suggests auto-completion to your users, while they
  start typing their e-mail address in a form. It also has a spelling-correct feature.
