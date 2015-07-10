@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="A little handy Javascript tool, that suggests auto-completion to your users, while they start typing their e-mail address in a form. It also has a spelling-correct feature.">
+    <meta name="author" content="Marcel Fetten">
+    <meta name="robots" content="index, follow">
+    <title>Auto-Suggest E-Mail Javascript - Demo</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,700" rel="stylesheet" type="text/css">
+
+    <style>
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            margin-bottom: 70px;
+        }
+
+        .container {
+            max-width: 600px;
+        }
+
+        .container p {
+            text-align: justify;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 70px;
+            background-color: #eff7fc;
+            padding: 10px;
+        }
+
+        .footer .container p {
+            text-align: center;
+            color: #93c7ef;
+        }
+
+        .footer .container a {
+            color: #93c7ef;
+            text-decoration: underline;
+        }
+
+        .footer .container a:hover {
+            color: #66afe9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #93c7ef;
+        }
+
+        form {
+            margin: 0 auto;
+            margin-top: 50px;
+            max-width: 420px;
+            position: relative;
+        }
+
+        form input#email {
+            border-radius: 0;
+            border: 1px solid #66afe9;
+        }
+
+        form input#email {
+            box-shadow: none;
+        }
+
+        #asm-autolist {
+            background-color: #ffffff;
+            border: 1px solid #66afe9;
+            position: absolute;
+            padding: 0;
+            width: 100%;
+            top: 26px;
+            left: 0;
+            margin-top: -1px;
+            box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.05);
+        }
+
+        #asm-autolist li.is-highlighted {
+            background-color: #fcf8e3;
+        }
+
+        #asm-autolist li {
+            list-style: none;
+            padding: 10px 16px;
+            font-size: 18px;
+            line-height: 1.3333333;
+        }
+
+        .button-list {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .btn {
+            margin-bottom: 5px;
+        }
+
+        .btn-primary {
+            background-color: #66afe9;
+            border-color: #66afe9;
+        }
+
+        .btn-primary:focus,
+        .btn-primary:hover,
+        .btn-primary:active {
+            background-color: #75b7eb;
+            border-color: #75b7eb;
+        }
+    </style>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="container">
+    <h1>Auto-Suggest E-Mail <em>Demo</em></h1>
+
+    <p><a href="https://github.com/Fetten/auto-suggest-email"> Auto-Suggest E-Mail</a> is a little handy Javascript
+        tool, that suggests auto-completion to your users, while
+        they start typing their e-mail address in a form. It also has a spelling-correct feature.</p>
+</div>
+
+<div class="container">
+    <p>Try it now for yourself! You should also test the spelling-correction by entering an incorrect domain name
+        like <em>gnail.com</em>, for example.</p>
+
+    <form>
+        <div class="form-group">
+            <label for="email">Enter your Email address</label>
+            <input type="email" class="form-control input-lg" id="email" autocomplete="off" autocapitalize="off">
+        </div>
+    </form>
+</div>
+
+<div class="container-fluid button-list">
+    <p><a href="https://github.com/Fetten/auto-suggest-email" class="btn btn-primary" role="button">
+        <span class="fa fa-github fa-lg"></span> View on GitHub
+    </a>
+
+        <a href="https://raw.githubusercontent.com/Fetten/auto-suggest-email/master/dist/auto-suggest-email.min.js"
+           target="_blank" class="btn btn-primary" role="button">
+            <span class="fa fa-cloud-download fa-lg"></span> Download .js file
+            <small>(1.25kb gzipped)</small>
+        </a>
+
+    </p>
+    <p><a class="twitter-share-button" href="https://twitter.com/share" data-via="FettenMeier" data-count="none"
+          data-size="large">
+        Tweet</a>
+    </p>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p>Copyright 2015 Marcel Fetten<br/>
+            <a href="https://github.com/Fetten/auto-suggest-email/blob/master/License.md">MIT
+                License</a> |
+            <span class="fa fa-code"></span> with <span class="fa fa-heart"></span>
+        </p>
+    </div>
+</footer>
+
+<script src="dist/auto-suggest-email.min.js"></script>
+<script>
+    var inputField = document.querySelector('form input#email');
+    var ase = new autoSuggestEmail(inputField);
+</script>
+
+<script>
+    window.twttr = (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function (f) {
+            t._e.push(f);
+        };
+
+        return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+
+</body>
+</html>
