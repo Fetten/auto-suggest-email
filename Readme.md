@@ -1,30 +1,42 @@
 # Auto-Suggest E-Mail
+[![Auto-Suggest E-Mail on Bower](https://img.shields.io/bower/v/auto-suggest-email.svg) ](https://www.npmjs.com/package/bootstrap)
+
 A little handy Javascript tool, that suggests auto-completion to your users, while they
  start typing their e-mail address in a form. It also has a spelling-correct feature.
 
 ## Usage
 Auto-Suggest E-Mail is pure Vanilla-JS and *does not* rely on any third party libraries like jQuery.
-    
-    <script src="auto-suggest-email.min.js"></script>
-    <script>
-        var inputField = document.querySelector('form input#email');
-        var ase = new autoSuggestEmail(inputField);
-    </script>
+To include the Javascript file in your project, you can either
+
+* [Download the latest release](dist/auto-suggest-email.min.js)
+* Install with [Bower](http://bower.io): `bower install auto-suggest-email`.
+
+To get the script running, create an instance of it and tell Auto-Suggest E-Mail which input field to watch for inputs.
+
+```html
+<script src="auto-suggest-email.min.js"></script>
+<script>
+    var inputField = document.querySelector('form input#email');
+    var ase = new autoSuggestEmail(inputField);
+</script>
+```
     
 ### With options
-    <script src="auto-suggest-email.min.js"></script>
-    <script>
-        var inputField = document.querySelector('form input#email');
-        
-        var ase = new autoSuggestEmail(inputField, {
-            domains:  ["mail.ru", "gmail.com", "googlemail.com", "hotmail.com", "hotmail.co.uk", "yahoo.com", "yahoo.co.jp"],
-            priority: ["mail.ru", "gmail.com", "hotmail.com", ""yahoo.co.jp"]
-        });
-    </script>
+
+```html
+<script src="auto-suggest-email.min.js"></script>
+<script>
+    var inputField = document.querySelector('form input#email');
+    var ase = new autoSuggestEmail(inputField, {
+        domains:  ["mail.ru", "gmail.com", "googlemail.com", "hotmail.com", "hotmail.co.uk", "yahoo.com", "yahoo.co.jp"],
+        priority: ["mail.ru", "gmail.com", "hotmail.com", ""yahoo.co.jp"]
+    });
+</script>
+```
 
 ### Options
 Auto-Suggest E-Mail comes with the international most commonly used e-mail domains build-in, but you can set your 
-your own list of domains, of course.
+own list of domains, of course.
 
 
 #### domains
@@ -41,38 +53,41 @@ the `domains` option. Overwrites the default options.
 #### Default Options
 These domains are included by default.
 
-    domains: [
-        'aol.com',
-        'facebook.com',
-        'gmail.com',
-        'googlemail.com',
-        'hotmail.com',
-        'hotmail.co.uk',
-        'icloud.com',
-        'live.com',
-        'me.com',
-        'mail.com',
-        'msn.com',
-        'outlook.com',
-        'yahoo.com',
-        'yahoo.co.uk',
-        'ymail.com'
-    ],
-    priority: [
-        'gmail.com',
-        'icloud.com',
-        'hotmail.com',
-        'facebook.com',
-        'outlook.com',
-        'yahoo.com'
-     ]
+```javascript
+domains: [
+    'aol.com',
+    'facebook.com',
+    'gmail.com',
+    'googlemail.com',
+    'hotmail.com',
+    'hotmail.co.uk',
+    'icloud.com',
+    'live.com',
+    'me.com',
+    'mail.com',
+    'msn.com',
+    'outlook.com',
+    'yahoo.com',
+    'yahoo.co.uk',
+    'ymail.com'
+],
+priority: [
+    'gmail.com',
+    'icloud.com',
+    'hotmail.com',
+    'facebook.com',
+    'outlook.com',
+    'yahoo.com'
+ ]
+```
 
 ## Where should I use it?
-I recommend to use Auto-Suggest E-Mail on any input form, where a users need to enter their e-mail addresses. This could be:
+I recommend to use Auto-Suggest E-Mail on any input form, where users need to enter their e-mail addresses. This could be:
 
 * Registration forms
 * Login forms
 * Newsletter registration
+* Contact forms
 
 ## Browser Support
 Auto-Suggest E-Mail works in all modern web browsers, that support HTML5, including:
@@ -81,12 +96,11 @@ Auto-Suggest E-Mail works in all modern web browsers, that support HTML5, includ
 * Firefox 3.5+
 * Opera 9+
 * Safari 4+
-* Chrome 1+ (I think)
+* Chrome
 * iPhone and iPad iOS1+
 * Android phone and tablets 2.1+
 * Blackberry OS6+
 * Windows 7.5+ (new Mango version)
-
 
 ## Copyright and license
 Copyright 2015 [Marcel Fetten](http://www.fetten-meier.com). Code released under [the MIT license](License.md).
