@@ -4,6 +4,11 @@
 A little handy Javascript tool, that suggests auto-completion to your users, while they
  start typing their e-mail address in a form. It also has a spelling-correct feature.
 
+![Auto-Suggest E-Mail Demo](http://fetten.github.io/auto-suggest-email/assets/img/auto-suggest-email-demo.gif)
+
+## Demo
+Checkout the [Demo Page](http://fetten.github.io/auto-suggest-email/) and try it for yourself.
+
 ## Usage
 Auto-Suggest E-Mail is pure Vanilla-JS and *does not* rely on any third party libraries like jQuery.
 To include the Javascript file in your project, you can either
